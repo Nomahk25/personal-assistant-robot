@@ -1,7 +1,7 @@
 import tkinter as tk
 from assistant.nlp import interpret_command
 from assistant.tasks import execute_command
-from assistant.speech import speak  # prints or speaks based on settings
+from assistant.speech import speak
 
 class AssistantGUI:
     def __init__(self, root):
@@ -10,7 +10,6 @@ class AssistantGUI:
         self.root.geometry("500x600")
         self.root.config(bg="#1e1e1e")
 
-        # Chat display area
         self.chat_display = tk.Text(
             root,
             bg="#2d2d2d",
@@ -21,19 +20,16 @@ class AssistantGUI:
         )
         self.chat_display.pack(padx=10, pady=10, fill=tk.BOTH, expand=True)
 
-        # Welcome message with usage instruction
         self.append_chat(
             "Assistant: Hello! I can help you with time, date, facts, and even web searches.\n"
             "Just type 'search' followed by what you want to find online.\n"
             "For example: search cute dog videos\n"
         )
 
-        # Text input field
         self.user_input = tk.Entry(root, font=("Arial", 14))
         self.user_input.pack(padx=10, pady=10, fill=tk.X)
         self.user_input.bind("<Return>", self.send_message)
 
-        # Send button
         self.send_button = tk.Button(root, text="Send", command=self.send_message)
         self.send_button.pack(pady=5)
 
