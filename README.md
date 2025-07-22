@@ -15,9 +15,11 @@ A simple yet powerful AI personal assistant with a graphical user interface buil
 
 ---
 
-## 🖼️ Screenshot
+## 🖼️ Screenshot1
 
 ![AI Assistant Robot](./ai_robot.png)
+
+## 🖼️ Screenshot2
 ![Results](./results.png)
 
 ---
